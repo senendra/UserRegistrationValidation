@@ -5,11 +5,16 @@ namespace UserRegistrationValidation
     {
         static void Main(string[] args)
         { 
-            string firstName = "senendra" ;
+            string firstName = "Senendra" ;
+            string lastName = "Deshlahre";
             Console.WriteLine(firstName);
             Validation check = new Validation();
-            bool result = check.ValidatingFirstName(firstName);
+            bool result = check.ValidatingName(firstName);
             Console.WriteLine(result);
+            result = check.ValidatingName(lastName);
+            Console.WriteLine(lastName);
+            Console.WriteLine(result);
+
         }
     }
 }

@@ -6,10 +6,10 @@ namespace UserRegistrationValidation
 {
     class Validation
     {
-        public string regrexFirstName = "^[A-Z]{1}[a-z]{2,}$";
-        public bool ValidatingFirstName( string firstName)
+        public string regrexName = "^[A-Z]{1}[a-z]{2,}$";
+        public bool ValidatingName( string name)
         {
-            return Regex.IsMatch(firstName, regrexFirstName);
+            return Regex.IsMatch(name, regrexName);
         }
     }
 }
