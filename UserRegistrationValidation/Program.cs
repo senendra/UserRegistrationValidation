@@ -7,6 +7,7 @@ namespace UserRegistrationValidation
         { 
             string firstName = "Senendra" ;
             string lastName = "Deshlahre";
+            string emailId = "abc.xyz@bl.co.in";
             Console.WriteLine(firstName);
             Validation check = new Validation();
             bool result = check.ValidatingName(firstName);
@@ -14,7 +15,9 @@ namespace UserRegistrationValidation
             result = check.ValidatingName(lastName);
             Console.WriteLine(lastName);
             Console.WriteLine(result);
-
+            result = check.ValidatingEmail(emailId);
+            Console.WriteLine(emailId);
+            Console.WriteLine(result);
         }
     }
 }

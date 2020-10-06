@@ -11,5 +11,10 @@ namespace UserRegistrationValidation
         {
             return Regex.IsMatch(name, regrexName);
         }
+        public string regrexEmail = "^[0-9a-zA-Z]{1,}([._+-][0-9a-zA-Z]+)*[@][0-9a-zA-Z]{1,}.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$";
+        public bool ValidatingEmail(string emailId)
+        {
+            return Regex.IsMatch(emailId, regrexEmail);
+        }
     }
 }
