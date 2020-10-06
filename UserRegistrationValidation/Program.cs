@@ -9,6 +9,7 @@ namespace UserRegistrationValidation
             string lastName = "Deshlahre";
             string emailId = "abc.xyz@bl.co.in";
             string phoneNumber = "91 9000003215";
+            string password = "password";
             Console.WriteLine(firstName);
             Validation check = new Validation();
             bool result = check.ValidatingName(firstName);
@@ -21,6 +22,9 @@ namespace UserRegistrationValidation
             Console.WriteLine(result);
             result = check.ValidatingPhoneNumber(phoneNumber);
             Console.WriteLine(phoneNumber);
+            Console.WriteLine(result);
+            result = check.ValidatingPassword(password);
+            Console.WriteLine(password);
             Console.WriteLine(result);
         }
     }

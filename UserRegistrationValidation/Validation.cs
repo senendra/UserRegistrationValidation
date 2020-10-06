@@ -21,5 +21,10 @@ namespace UserRegistrationValidation
         {
             return Regex.IsMatch(phoneNumber, regexPhoneNumber);
         }
+        public string regexPassword = "[a-zA-Z]{8,}";
+        public bool ValidatingPassword(string password)
+        {
+            return Regex.IsMatch(password, regexPassword);
+        }
     }
 }
