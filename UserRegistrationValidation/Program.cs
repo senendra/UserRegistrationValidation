@@ -10,22 +10,29 @@ namespace UserRegistrationValidation
             string emailId = "abc.xyz@bl.co.in";
             string phoneNumber = "91 9000003215";
             string password = "Password@123";
-            Console.WriteLine(firstName);
+            Console.Write(firstName);
             Validation check = new Validation();
             bool result = check.ValidatingName(firstName);
-            Console.WriteLine(result);
+            check.Display(result);
             result = check.ValidatingName(lastName);
-            Console.WriteLine(lastName);
-            Console.WriteLine(result);
+            Console.Write(lastName);
+            check.Display(result);
             result = check.ValidatingEmail(emailId);
-            Console.WriteLine(emailId);
-            Console.WriteLine(result);
+            Console.Write(emailId);
+            check.Display(result);
             result = check.ValidatingPhoneNumber(phoneNumber);
-            Console.WriteLine(phoneNumber);
-            Console.WriteLine(result);
+            Console.Write(phoneNumber);
+            check.Display(result);
             result = check.ValidatingPassword(password);
-            Console.WriteLine(password);
-            Console.WriteLine(result);
+            Console.Write(password);
+            check.Display(result);
+            Console.WriteLine("\nChecking for sample mails :\n");
+            foreach (string mail in check.GetList())
+            {
+                Console.Write(mail + " : ");
+                result = check.ValidatingEmail(mail);
+                check.Display(result);
+            }
         }
     }
 }
