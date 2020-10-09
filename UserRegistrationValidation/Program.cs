@@ -9,7 +9,7 @@ namespace UserRegistrationValidation
             string lastName = "Deshlahre";
             string emailId = "abc.xyz@bl.co.in";
             string phoneNumber = "91 9000003215";
-            string password = "psSss2@-jg";
+            string password = "Password@123";
             Console.WriteLine(firstName);
             Validation check = new Validation();
             bool result = check.ValidatingName(firstName);
