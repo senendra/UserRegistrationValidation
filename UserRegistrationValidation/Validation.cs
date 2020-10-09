@@ -9,7 +9,7 @@ namespace UserRegistrationValidation
         public string regexName = "^[A-Z]{1}[a-z]{2,}$";
         public string regexPhoneNumber = "^[1-9]{1}[0-9]{1}[ ]([1-9]{1}[0-9]{9})$";
         public string regexEmail = "^[0-9a-zA-Z]{1,}([._+-][0-9a-zA-Z]+)*[@][0-9a-zA-Z]{1,}.[a-zA-Z]{2,3}(.[a-zA-Z]{2,3})?$";
-        public string regexPassword = "^(?=.*?[A-Z])[A-Za-z0-9^!@#$%&+-.]{8,}$";
+        public string regexPassword = "^(?=.*?[A-Z])(?=.*?[0-9])[A-Za-z0-9^!@#$%&+-.]{8,}$";
         public bool ValidatingName( string name)
         {
             return Regex.IsMatch(name, regexName);
