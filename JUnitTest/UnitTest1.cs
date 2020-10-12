@@ -68,57 +68,87 @@ namespace JUnitTest
         [TestMethod]
         public void SadFirstNameTest()
         {
-            //Arrange
-            string firstName = "senendra";
-            Validation test = new Validation();
-            //Act
-            bool firstNameResult = test.ValidatingName(firstName);
-           //Assert
-            Assert.IsFalse(firstNameResult);
+            try
+            {
+                //Arrange
+                string firstName = "senendra";
+                Validation test = new Validation();
+                //Act
+                bool firstNameResult = test.ValidatingName(firstName);     
+            }
+            catch(UserRegistrationCustomException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid first name.", e.Message);
+            }
         }
         [TestMethod]
         public void SadLastNameTest()
         {
-            //Arrange
-            string lastName = "deshlahre";
-            Validation test = new Validation();
-            //Act
-            bool lastNameResult = test.ValidatingName(lastName);
-           //Assert
-            Assert.IsFalse(lastNameResult);
+            try
+            {
+                //Arrange
+                string lastName = "deshlahre";
+                Validation test = new Validation();
+                //Act
+                bool lastNameResult = test.ValidatingName(lastName);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid last name.", e.Message);
+            }
         }
         [TestMethod]
         public void SadPhoneNumberTest()
         {
-            //Arrange
-            string phoneNumber = "01 1236547892";
-            Validation test = new Validation();
-            //Act
-            bool phoneNumberResult = test.ValidatingPhoneNumber(phoneNumber);
-            //Assert
-            Assert.IsFalse(phoneNumberResult);
+            try
+            {
+                //Arrange
+                string phoneNumber = "01 1236547892";
+                Validation test = new Validation();
+                //Act
+                bool phoneNumberResult = test.ValidatingPhoneNumber(phoneNumber);
+            }
+            catch(UserRegistrationCustomException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Phone Number.", e.Message);
+            }
         }
         [TestMethod]
         public void SadEmailTest()
         {
-            //Arrange
-            string email = "abc.xyz.@gmail.com";
-            Validation test = new Validation();
-            //Act
-            bool emailResult = test.ValidatingEmail(email);
-            //Assert
-            Assert.IsFalse(emailResult);
+            try
+            {
+                //Arrange
+                string email = "abc.xyz.@gmail.com";
+                Validation test = new Validation();
+                //Act
+                bool emailResult = test.ValidatingEmail(email);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Email ID.", e.Message);
+            }
         }
         [TestMethod]
         public void SadPasswordTest()
         {
-            //Arrange
-            string password = "password@@12343";
-            Validation test = new Validation();
-            //Act
-            bool passwordResult = test.ValidatingPassword(password);
-           //Assert
-            Assert.IsFalse(passwordResult);
+            try
+            {
+                //Arrange
+                string password = "password@@12343";
+                Validation test = new Validation();
+                //Act
+                bool passwordResult = test.ValidatingPassword(password);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                //Assert
+                Assert.AreEqual("Invalid Password.", e.Message);
+            }
         }
         [TestMethod]
         [DataRow("abc@yahoo.com")]
