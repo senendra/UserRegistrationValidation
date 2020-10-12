@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 namespace UserRegistrationValidation
 {
-    class Validation
+    public class Validation
     {
         public string regexName = "^[A-Z]{1}[a-z]{2,}$";
         public string regexPhoneNumber = "^[1-9]{1}[0-9]{1}[ ]([1-9]{1}[0-9]{9})$";
