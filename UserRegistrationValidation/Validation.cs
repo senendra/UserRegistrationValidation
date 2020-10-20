@@ -24,22 +24,11 @@ namespace UserRegistrationValidation
             "abc@gmail.com.com",
             "abc+100@gmail.com"
         };
-        public bool ValidatingName( string name)
-        {
-            return Regex.IsMatch(name, regexName);
-        }
-        public bool ValidatingEmail(string emailId)
-        {
-            return Regex.IsMatch(emailId, regexEmail);
-        }      
-        public bool ValidatingPhoneNumber(string phoneNumber)
-        {
-            return Regex.IsMatch(phoneNumber, regexPhoneNumber);
-        }      
-        public bool ValidatingPassword(string password)
-        {
-            return Regex.IsMatch(password, regexPassword);
-        }
+        public bool ValidatingName( string name) => Regex.IsMatch(name, regexName);      
+        public bool ValidatingEmail(string emailId) => Regex.IsMatch(emailId, regexEmail);
+        public bool ValidatingPhoneNumber(string phoneNumber) => Regex.IsMatch(phoneNumber, regexPhoneNumber);     
+        public bool ValidatingPassword(string password) => Regex.IsMatch(password, regexPassword);
+
         public List<string> GetList()
         {
             return sampleEmail;
